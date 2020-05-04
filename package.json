@@ -1,0 +1,24 @@
+{
+  "name": "handlebars-to-static-or-ssr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "cd src && NODE_ENV=development nodemon server.js -e js,hbs,json",
+    "serve": "cd src && NODE_ENV=production node server.js",
+    "build:static": "copyfiles -u 2 ./src/public/** ./www/static && cd src && node toStatic.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.3"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.2.0",
+    "nodemon": "^2.0.2",
+    "reload": "^3.0.4"
+  }
+}

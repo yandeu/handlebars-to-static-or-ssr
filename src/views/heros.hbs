@@ -1,0 +1,11 @@
+<h1>List of heros</h1>
+
+<ul>
+  {{#each heros}}
+  <li>
+    <a href="/heros/{{slug}}">
+      {{name}}
+    </a>
+  </li>
+  {{/each}}
+</ul>
